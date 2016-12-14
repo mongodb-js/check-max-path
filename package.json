@@ -17,7 +17,7 @@
     "url": "git://github.com/mongodb-js/check-max-path.git"
   },
   "dependencies": {
-    "debug": "^2.2.0",
+    "debug": "^2.4.0",
     "glob": "^7.1.1",
     "minimist": "^1.2.0"
   },
