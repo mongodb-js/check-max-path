@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "check": "mongodb-js-precommit",
-    "test": "mocha",
+    "test": "mocha"
   },
   "bin": {
     "check-max-path": "bin/check-max-path.js"
