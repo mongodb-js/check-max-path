@@ -7,6 +7,7 @@ var usage = fs.readFileSync(path.resolve(__dirname, '../usage.txt')).toString();
 var args = require('minimist')(process.argv.slice(2), {
   boolean: ['debug']
 });
+const chalk = require('chalk');
 
 if (args.debug) {
   process.env.DEBUG = 'check-max-path';
@@ -30,16 +31,19 @@ if (args.version) {
   process.exit(1);
 }
 
+console.log('running check', args);
+
 check(args, function(err) {
   if (err) {
-    console.error(err.message + '\n\n');
+    console.error(chalk.red(err.message) + '\n\n');
     if (err.tooLong) {
       err.tooLong.map(function(f) {
-        console.error('- %s', f);
+        console.error(`- (${chalk.red(f.length)}) ${f}`, f);
       });
     }
     process.exit(1);
     return;
   }
+  console.log('👍');
   process.exit(0);
 });

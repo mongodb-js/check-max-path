@@ -32,4 +32,4 @@ Apache 2.0
 [travis_url]: https://travis-ci.org/mongodb-js/check-max-path
 [npm_img]: https://img.shields.io/npm/v/check-max-path.svg
 [npm_url]: https://npmjs.org/package/check-max-path
-: https://msdn.microsoft.com/en-us/library/windows/desktop/aa365247(v=vs.85).aspx#maxpath
+[max-path-docs]: https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#maximum-path-length-limitation
